@@ -5,7 +5,7 @@ const int ScalarConverter::CHAR_NUMERIC_MAX = std::numeric_limits<char>::max();
 const int ScalarConverter::INT_NUMERIC_MIN = std::numeric_limits<int>::min();
 const int ScalarConverter::INT_NUMERIC_MAX = std::numeric_limits<int>::max();
 
-ScalarConverter::ScalarConverter(){};
+ScalarConverter::ScalarConverter(){}
 ScalarConverter::ScalarConverter(const ScalarConverter &other)
 {
     (void)other;
@@ -15,7 +15,7 @@ ScalarConverter &ScalarConverter::operator=(const ScalarConverter &other)
     (void)other;
     return *this;
 }
-ScalarConverter::~ScalarConverter(){};
+ScalarConverter::~ScalarConverter(){}
 
 namespace
 {

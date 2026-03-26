@@ -10,9 +10,21 @@
 Base* generate(void) {
     int random = rand() % 3;
 
-    if (random == 0) return new A();
-    else if (random == 1) return new B();
-    else return new C();
+    if (random == 0)
+    {
+        std::cout << "Generated type: A" << std::endl;
+        return new A();
+    }
+    else if (random == 1)
+    {
+        std::cout << "Generated type: B" << std::endl;
+        return new B();
+    }
+    else
+    {
+        std::cout << "Generated type: C" << std::endl;
+        return new C();
+    }
 }
 
 void identify(Base& p) {
