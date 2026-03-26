@@ -3,9 +3,9 @@
 #include "C.hpp"
 #include "Base.hpp"
 #include <iostream>
+#include <exception>
 #include <cstdlib>
 #include <ctime>
-#include <typeinfo>
 
 Base* generate(void) {
     int random = rand() % 3;
@@ -32,19 +32,19 @@ void identify(Base& p) {
         (void)dynamic_cast<A&>(p);
         std::cout << "A" << std::endl;
     }
-    catch (std::bad_cast&) {}
+    catch (const std::exception&) {}
     
     try {
         (void)dynamic_cast<B&>(p);
         std::cout << "B" << std::endl;
     }
-    catch (std::bad_cast&) {}
+    catch (const std::exception&) {}
 
     try {
         (void)dynamic_cast<C&>(p);
         std::cout << "C" << std::endl;
     }
-    catch (std::bad_cast&) {}
+    catch (const std::exception&) {}
 }
 void identify(Base *p) {
     if (dynamic_cast<A*>(p))
