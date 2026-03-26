@@ -8,7 +8,6 @@
 #include <typeinfo>
 
 Base* generate(void) {
-    srand(static_cast<unsigned int>(time(0)));
     int random = rand() % 3;
 
     if (random == 0) return new A();
